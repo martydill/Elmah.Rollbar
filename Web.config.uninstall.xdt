@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.web>
+    <httpModules>
+      <add type="Elmah.Rollbar.RollbarErrorModule, Elmah.Rollbar"
+           xdt:Transform="Remove"
+           xdt:Locator="Match(type)" />
+    </httpModules>
+  </system.web>
+  <system.webServer>
+    <modules>
+      <add type="Elmah.Rollbar.RollbarErrorModule, Elmah.Rollbar"
+           xdt:Transform="Remove"
+           xdt:Locator="Match(type)" />
+    </modules>
+  </system.webServer>
+</configuration>

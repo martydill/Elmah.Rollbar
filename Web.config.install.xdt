@@ -1,0 +1,21 @@
+﻿<?xml version="1.0"?>
+
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.web>
+    <httpModules>
+      <add name="ElmahRollbar"
+           type="Elmah.Rollbar.RollbarErrorModule, Elmah.Rollbar"
+           xdt:Transform="InsertIfMissing"
+           xdt:Locator="Match(type)" />
+    </httpModules>
+  </system.web>
+  <system.webServer>
+    <modules>
+      <add name="ElmahRollbar"
+           type="Elmah.Rollbar.RollbarErrorModule, Elmah.Rollbar"
+           preCondition="managedHandler"
+           xdt:Transform="InsertIfMissing"
+           xdt:Locator="Match(type)" />
+    </modules>
+  </system.webServer>
+</configuration>
